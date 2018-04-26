@@ -1,4 +1,4 @@
-package com.codehub.spring.SpringCoreCodeExamples;
+package com.codehub.spring.springCoreCodeExamples;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,5 +8,8 @@ public class SpringCoreCodeExamplesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringCoreCodeExamplesApplication.class, args);
+
+        Travel myTravel = new Travel();
+        myTravel.startJourney();
 	}
 }
