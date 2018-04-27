@@ -1,6 +1,7 @@
 package com.codehub.spring.springCoreCodeExamples.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import com.codehub.spring.springCoreCodeExamples.services.GreetingService;
@@ -12,7 +13,7 @@ public class ConstructorInjectedController {
     private GreetingService greetingService;
 
     @Autowired
-    public ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("greetingServiceGreekImpl")GreetingService greetingService) {
         this.greetingService = greetingService;
         System.out.println("Using Constructor");
     }
