@@ -1,6 +1,6 @@
-package com.codehub.spring.springCoreCodeExamples;
+package com.codehub.spring.core;
 
-import com.codehub.spring.springCoreCodeExamples.vehicle.Car;
+import com.codehub.spring.core.vehicle.Car;
 
 public class Travel {
     Car car = new Car();
