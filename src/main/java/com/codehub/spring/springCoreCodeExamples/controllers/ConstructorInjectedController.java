@@ -6,6 +6,7 @@ public class ConstructorInjectedController {
 
     private GreetingService greetingService;
 
+    //I'm injecting the dependency with through the constructor
     public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }

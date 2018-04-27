@@ -9,6 +9,7 @@ public class SetterInjectedController {
         return greetingService.sayGreeting();
     }
 
+    //I'm injecting the dependency with a setter
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
