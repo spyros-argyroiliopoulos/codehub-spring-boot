@@ -3,14 +3,12 @@ package com.codehub.spring.springCoreCodeExamples;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ImportResource;
 
 import com.codehub.spring.springCoreCodeExamples.controllers.AutowiredInjectedController;
 import com.codehub.spring.springCoreCodeExamples.controllers.ConstructorInjectedController;
 import com.codehub.spring.springCoreCodeExamples.controllers.SetterInjectedController;
 
 @SpringBootApplication
-@ImportResource("classpath:app-config.xml")
 public class SpringCoreCodeExamplesApplication {
 
     public static void main(String[] args) {
