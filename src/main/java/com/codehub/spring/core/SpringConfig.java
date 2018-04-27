@@ -1,18 +1,18 @@
-package com.codehub.spring.springCoreCodeExamples;
+package com.codehub.spring.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.codehub.spring.springCoreCodeExamples.controllers.AutowiredInjectedController;
-import com.codehub.spring.springCoreCodeExamples.controllers.ConstructorInjectedController;
-import com.codehub.spring.springCoreCodeExamples.controllers.SetterInjectedController;
-import com.codehub.spring.springCoreCodeExamples.services.GreetingService;
-import com.codehub.spring.springCoreCodeExamples.services.GreetingServiceImpl;
+import com.codehub.spring.core.controllers.AutowiredInjectedController;
+import com.codehub.spring.core.controllers.ConstructorInjectedController;
+import com.codehub.spring.core.controllers.SetterInjectedController;
+import com.codehub.spring.core.services.GreetingService;
+import com.codehub.spring.core.services.GreetingServiceImpl;
 
 @Configuration
 public class SpringConfig {
 
-    //    just bean declaration
+    //    Bean declaration
     @Bean(name = "greetingService")
     public GreetingService getGreetingService() {
         return new GreetingServiceImpl();
@@ -33,11 +33,10 @@ public class SpringConfig {
         return constructorInjectedController;
     }
 
-    //    use autowire with this bean, the same with bean declaration
+    //    Use autowire with this bean, the same with bean declaration
     @Bean(name = "autowiredInjectedController")
     public AutowiredInjectedController getAutowiredInjectedController() {
-        AutowiredInjectedController autowiredInjectedController = new AutowiredInjectedController();
-        return autowiredInjectedController;
+        return new AutowiredInjectedController();
     }
 
 }
