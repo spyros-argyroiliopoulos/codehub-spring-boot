@@ -1,6 +1,6 @@
-package com.codehub.spring.springCoreCodeExamples.controllers;
+package com.codehub.spring.core.controllers;
 
-import com.codehub.spring.springCoreCodeExamples.services.GreetingService;
+import com.codehub.spring.core.services.GreetingService;
 
 public class ConstructorInjectedController {
 

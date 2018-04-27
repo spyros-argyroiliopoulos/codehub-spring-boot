@@ -1,4 +1,4 @@
-package com.codehub.spring.springCoreCodeExamples.services;
+package com.codehub.spring.core.services;
 
 public class GreetingServiceImpl implements GreetingService {
 

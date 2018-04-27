@@ -4,13 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="greetingService"
-          class="com.codehub.spring.springCoreCodeExamples.services.GreetingServiceImpl"/>
+          class="com.codehub.spring.core.services.GreetingServiceImpl"/>
 
     <!--Setter Injection-->
     <!-- property name="Name of the propert in the class, Spring will find the correct Setter for it" -->
     <!-- ref="name of the bean as declared in this xml"-->
     <bean name="setterInjectedController"
-          class="com.codehub.spring.springCoreCodeExamples.controllers.SetterInjectedController">
+          class="com.codehub.spring.core.controllers.SetterInjectedController">
     <property name="greetingService" ref="greetingService"/>
     </bean>
 
@@ -18,7 +18,7 @@
     <!--constructor-arg index="the indexed position of the constructor arguments to be injected"-->
     <!-- ref="name of the bean as declared in this xml"-->
     <bean name="constructorInjectedController"
-          class="com.codehub.spring.springCoreCodeExamples.controllers.ConstructorInjectedController">
+          class="com.codehub.spring.core.controllers.ConstructorInjectedController">
     <constructor-arg index="0" ref="greetingService"/>
     </bean>
 
@@ -27,7 +27,7 @@
     <!--autowire="by which convention the injection will happen"-->
     <!--It needs a setter to use-->
     <bean name="autowiredInjectedController"
-          class="com.codehub.spring.springCoreCodeExamples.controllers.AutowiredInjectedController"
+          class="com.codehub.spring.core.controllers.AutowiredInjectedController"
           autowire="byType">
     </bean>
 
@@ -36,7 +36,7 @@
     <!--autowire="constructor"-->
     <!--It needs a constructor to use-->
     <!--<bean name="autowiredInjectedController"-->
-          <!--class="com.codehub.spring.springCoreCodeExamples.controllers.AutowiredInjectedController"-->
+          <!--class="AutowiredInjectedController"-->
           <!--autowire="constructor">-->
         <!--<constructor-arg index="0" ref="greetingService"/>-->
     <!--</bean>-->
