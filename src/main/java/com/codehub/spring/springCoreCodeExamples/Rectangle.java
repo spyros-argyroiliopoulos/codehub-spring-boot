@@ -1,8 +1,13 @@
 package com.codehub.spring.springCoreCodeExamples;
 
-public class Rectangle {
+public class Rectangle implements Shape {
     private double length;
     private double height;
+
+    @Override
+    public double getArea() {
+        return (length * height);
+    }
 
     public double getLength() {
         return length;

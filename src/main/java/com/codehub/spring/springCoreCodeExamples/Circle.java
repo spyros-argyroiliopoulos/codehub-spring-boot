@@ -1,7 +1,12 @@
 package com.codehub.spring.springCoreCodeExamples;
 
-public class Circle {
+public class Circle implements Shape {
     private double radius;
+
+    @Override
+    public double getArea() {
+        return (radius * radius * Math.PI);
+    }
 
     public double getRadius() {
         return radius;

@@ -3,18 +3,10 @@ package com.codehub.spring.springCoreCodeExamples;
 import java.util.ArrayList;
 
 public class AreaManager {
-    public double calculateArea(ArrayList<Object>... shapes) {
+    public double calculateArea(ArrayList<Shape> shapes) {
         double area = 0;
-        for (Object shape : shapes) {
-            if (shape instanceof Rectangle) {
-                Rectangle rect = (Rectangle)shape;
-                area += (rect.getLength() * rect.getHeight());
-            } else if (shape instanceof Circle) {
-                Circle circle = (Circle)shape;
-                area += (circle.getRadius() * circle.getRadius() * Math.PI);
-            } else {
-                throw new RuntimeException("Shape not supported");
-            }
+        for (Shape shape : shapes) {
+            area += shape.getArea();
         }
         return area;
     }
