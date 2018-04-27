@@ -1,4 +1,4 @@
-package com.codehub.spring.springCoreCodeExamples.vehicle;
+package com.codehub.spring.core.vehicle;
 
 public class Bike implements Vehicle {
 
