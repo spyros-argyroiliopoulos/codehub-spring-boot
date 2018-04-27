@@ -1,4 +1,4 @@
-package com.codehub.spring.springCoreCodeExamples.services;
+package com.codehub.spring.core.services;
 
 import org.springframework.stereotype.Service;
 
