@@ -1,12 +1,18 @@
 package com.codehub.spring.springCoreCodeExamples;
 
-import com.codehub.spring.springCoreCodeExamples.vehicle.Car;
+import com.codehub.spring.springCoreCodeExamples.vehicle.Vehicle;
 
 public class Travel {
-    Car car = new Car();
+
+    Vehicle myVehicle;
+
+    public void setV(Vehicle givenVehicle) {
+        myVehicle = givenVehicle;
+    }
+
 
     public void startJourney() {
-        car.drive();
+        myVehicle.start();
     }
 
 }
