@@ -9,7 +9,7 @@ import com.codehub.spring.springCoreCodeExamples.services.GreetingService;
 @Controller
 public class AutowiredInjectedController {
 
-//    No setter or constructor is needed
+    //We need this annotation here to know where to Autowire
     @Autowired
     private GreetingService greetingService;
 
