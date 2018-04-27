@@ -1,4 +1,4 @@
-package com.codehub.spring.springCoreCodeExamples.services;
+package com.codehub.spring.core.services;
 
 import org.springframework.stereotype.Service;
 
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class GreetingServiceSpainImpl implements GreetingService {
 
-    public static final String HELLO_CODE_HUB = "Hola Code.Hub!";
+    private static final String HELLO_CODE_HUB = "Hola Code.Hub!";
 
     @Override
     public String sayGreeting() {

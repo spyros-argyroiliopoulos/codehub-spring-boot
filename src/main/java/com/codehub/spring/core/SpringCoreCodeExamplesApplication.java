@@ -1,12 +1,12 @@
-package com.codehub.spring.springCoreCodeExamples;
+package com.codehub.spring.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.codehub.spring.springCoreCodeExamples.controllers.AutowiredInjectedController;
-import com.codehub.spring.springCoreCodeExamples.controllers.ConstructorInjectedController;
-import com.codehub.spring.springCoreCodeExamples.controllers.SetterInjectedController;
+import com.codehub.spring.core.controllers.AutowiredInjectedController;
+import com.codehub.spring.core.controllers.SetterInjectedController;
+import com.codehub.spring.core.controllers.ConstructorInjectedController;
 
 @SpringBootApplication
 public class SpringCoreCodeExamplesApplication {
