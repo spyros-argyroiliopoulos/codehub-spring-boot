@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import com.codehub.spring.core.controllers.AutowiredInjectedController;
 import com.codehub.spring.core.controllers.ConstructorInjectedController;
 import com.codehub.spring.core.controllers.SetterInjectedController;
+import com.codehub.spring.core.controllers.SomeController;
 
 @SpringBootApplication
 public class SpringCoreCodeExamplesApplication {
@@ -22,5 +23,8 @@ public class SpringCoreCodeExamplesApplication {
 
         SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
         System.out.println(setterInjectedController.sayHello());
+
+        SomeController someController = (SomeController) ctx.getBean("someController");
+        someController.showMeSomeLog();
     }
 }
