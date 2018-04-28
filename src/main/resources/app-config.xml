@@ -3,9 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="greetingService"
-          class="com.codehub.spring.core.services.GreetingServiceImpl"/>
-
     <!--Setter Injection-->
     <!-- property name="Name of the propert in the class, Spring will find the correct Setter for it" -->
     <!-- ref="name of the bean as declared in this xml"-->
@@ -36,6 +33,16 @@
         <!--<constructor-arg index="0" ref="greetingService"/>-->
     <!--</bean>-->
     <!--Arguments and ref on constructor are not needed, it autowires them from the available beans	-->
+
+    <beans profile="es">
+        <bean name="greetingService"
+              class="com.codehub.spring.core.services.GreetingServiceSpanishImpl"/>
+    </beans>
+
+    <beans profile="fr">
+        <bean name="greetingService"
+              class="com.codehub.spring.core.services.GreetingServiceFrenchImpl"/>
+    </beans>
 
 </beans>
 
