@@ -12,7 +12,6 @@ public class AutowiredInjectedController {
 
     //We need this annotation here to know where to Autowire
     @Autowired
-    @Qualifier("greetingServiceSpainImpl")
     private GreetingService greetingService;
 
     public String sayHello() {
