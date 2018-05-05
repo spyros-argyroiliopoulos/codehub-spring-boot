@@ -1,35 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN" monitorInterval="30">
+<!--<Configuration status="WARN" monitorInterval="30">-->
+
+
+<!--<Loggers>-->
+<!--<Logger name="com.example.log4j2demo" level="debug" additivity="false">-->
+<!--<AppenderRef ref="ConsoleAppender" />-->
+<!--</Logger>-->
+
+<!--<Root level="info">-->
+<!--<AppenderRef ref="ConsoleAppender" />-->
+<!--</Root>-->
+<!--</Loggers>-->
+
+<!--</Configuration>-->
+
+<Configuration status="WARN">
+
     <Properties>
-        <Property name="LOG_PATTERN">
-            %d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${hostName} --- [%15.15t] %-40.40c{1.} : %m%n%ex
+        <Property name="LOG_PATTERN_1">
+            %highlight{%d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${hostName} --- [%15.15t] %-40.40c{1.} : %m%n%ex%throwable}{Logback}
+        </Property>
+
+        <Property name="LOG_PATTERN_2">
+            [%-5level] %d{HH:mm:ss.SSS} %logger{36}.%M() - %msg%n
+        </Property>
+
+        <Property name="LOG_PATTERN_3">
+            %d{yyyy-MM-dd HH:mm:ss} [%-5level] %logger{36}.%M() - %msg%n
         </Property>
     </Properties>
+
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
-            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <PatternLayout pattern="${LOG_PATTERN_1}"/>
         </Console>
 
+        <File name="FileAppender" fileName="logs/log4j2-demo.log">
+            <PatternLayout pattern="${LOG_PATTERN_2}"/>
+        </File>
+
         <!-- Rolling File Appender -->
-        <RollingFile name="FileAppender" fileName="logs/log4j2-demo.log"
+        <RollingFile name="RollingFileAppender" fileName="logs/log4j2-demo-rolling.log" immediateFlush="false"
+                     append="false"
                      filePattern="logs/log4j2-demo-%d{yyyy-MM-dd}-%i.log">
             <PatternLayout>
-                <Pattern>${LOG_PATTERN}</Pattern>
+                <Pattern>${LOG_PATTERN_3}</Pattern>
             </PatternLayout>
+
             <Policies>
-                <SizeBasedTriggeringPolicy size="1MB" />
+                <SizeBasedTriggeringPolicy size="1MB"/>
             </Policies>
+
             <DefaultRolloverStrategy max="10"/>
+
         </RollingFile>
     </Appenders>
-    <Loggers>
-        <Logger name="com.example.log4j2demo" level="debug" additivity="false">
-            <AppenderRef ref="ConsoleAppender" />
-        </Logger>
 
+    <Loggers>
         <Root level="info">
-            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="RollingFileAppender"/>
         </Root>
     </Loggers>
-
 </Configuration>
