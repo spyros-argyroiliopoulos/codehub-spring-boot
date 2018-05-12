@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
-    <logger name="com.codehub.spring.core.controllers" level="WARN" additivity="false">
+    <logger name="com.codehub.spring.core.controllers" additivity="false">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </logger>
-    <logger name="com.codehub.spring.core.helpers" level="WARN" additivity="false">
+    <logger name="com.codehub.spring.core.helpers" additivity="false">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </logger>
